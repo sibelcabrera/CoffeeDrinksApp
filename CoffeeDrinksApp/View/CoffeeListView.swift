@@ -13,15 +13,22 @@ struct CoffeeListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.drinks) { drink in
-                VStack(alignment: .leading) {
-                    Text(drink.name)
-                        .font(.headline)
-                    Text(drink.description)
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
+                NavigationLink(destination: CoffeeDetailView(drink: drink)) {
+                    
+                    VStack(alignment: .leading) {
+                        Text(drink.name)
+                            .font(.headline)
+                        
+                        Text(drink.description)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
                 }
             }
             .navigationBarTitle("Coffee Drinks")
+        }
+        .onAppear {
+            viewModel.loadDrinks()
         }
     }
 }

@@ -6,16 +6,22 @@
 //
 
 import Foundation
-internal import Combine
+import SwiftUI
+import Combine
 
 class CoffeeViewModel: ObservableObject {
     
-    @Published var drinks: [CoffeeDrink] = [
-        CoffeeDrink(name:"Espresso", description: "Esencia de café"),
-        CoffeeDrink(name:"Capuccino", description: "Café con leche espumoso"),
-        CoffeeDrink(name:"Latte Clásico", description: "Café con leche sin presencia de espuma"),
-        CoffeeDrink(name:"Long Black", description: "Espresso Doble sobre el agua caliente"),
-        CoffeeDrink(name:"Mokaccino", description: "Café con leche sin presencia de espuma")
+    @Published var drinks: [CoffeeDrink] = []
+    @Published var isLoading = false
+    
+    private let service = CoffeeService()
+    
+    func loadDrinks() {
+        isLoading = true
         
-    ]
+        service.fetchDrinks { [weak self] drinks in
+            self?.drinks = drinks
+            self?.isLoading = false
+        }
+    }
 }
