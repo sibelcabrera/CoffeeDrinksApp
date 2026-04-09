@@ -11,7 +11,11 @@ import SwiftUI
 struct CoffeeDrinksAppApp: App {
     var body: some Scene {
         WindowGroup {
-            CoffeeListView()
+            CoffeeListView(
+                viewModel: CoffeeViewModel(
+                    service: CoffeeService()
+                )
+            )
         }
     }
 }

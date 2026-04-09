@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CoffeeListView: View {
-    @StateObject var viewModel = CoffeeViewModel()
-    
+    @StateObject var viewModel: CoffeeViewModel
+
     var body: some View {
         NavigationView {
             List(viewModel.drinks) { drink in
@@ -34,5 +34,9 @@ struct CoffeeListView: View {
 }
 
 #Preview {
-    CoffeeListView()
+    CoffeeListView(
+        viewModel: CoffeeViewModel(
+            service: CoffeeService()
+        )
+    )
 }

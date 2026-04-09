@@ -14,8 +14,12 @@ class CoffeeViewModel: ObservableObject {
     @Published var drinks: [CoffeeDrink] = []
     @Published var isLoading = false
     
-    private let service = CoffeeService()
-    
+    private let service: CoffeeService
+
+    init(service: CoffeeService) {
+        self.service = service
+    }
+
     func loadDrinks() {
         isLoading = true
         
