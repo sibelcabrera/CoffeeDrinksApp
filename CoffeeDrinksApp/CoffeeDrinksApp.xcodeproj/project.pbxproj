@@ -6,30 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		6C798B322F5ABD7C00BA70BC /* CoffeeDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C798B312F5ABD7C00BA70BC /* CoffeeDrink.swift */; };
-		6C798B342F5ABE0700BA70BC /* CoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C798B332F5ABE0700BA70BC /* CoffeeViewModel.swift */; };
-		6C798B362F5AC11E00BA70BC /* CoffeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C798B352F5AC11E00BA70BC /* CoffeeListView.swift */; };
-		6C8147272F6937A1007B2809 /* CoffeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8147262F6937A1007B2809 /* CoffeeDetailView.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		6C798B312F5ABD7C00BA70BC /* CoffeeDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDrink.swift; sourceTree = "<group>"; };
-		6C798B332F5ABE0700BA70BC /* CoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewModel.swift; sourceTree = "<group>"; };
-		6C798B352F5AC11E00BA70BC /* CoffeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListView.swift; sourceTree = "<group>"; };
 		6C8147192F692C5F007B2809 /* CoffeeDrinksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeDrinksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C8147262F6937A1007B2809 /* CoffeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6C798B212F5ABC3400BA70BC /* CoffeeDrinksApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CoffeeDrinksApp;
-			sourceTree = "<group>";
-		};
-		6C8147212F6930CE007B2809 /* Services */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -49,37 +33,8 @@
 			isa = PBXGroup;
 			children = (
 				6C798B212F5ABC3400BA70BC /* CoffeeDrinksApp */,
-				6C798B302F5ABD2600BA70BC /* View */,
-				6C798B2F2F5ABD0100BA70BC /* ViewModel */,
-				6C798B2E2F5ABCF500BA70BC /* Model */,
 				6C8147192F692C5F007B2809 /* CoffeeDrinksApp.app */,
-				6C8147212F6930CE007B2809 /* Services */,
 			);
-			sourceTree = "<group>";
-		};
-		6C798B2E2F5ABCF500BA70BC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6C798B312F5ABD7C00BA70BC /* CoffeeDrink.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6C798B2F2F5ABD0100BA70BC /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				6C798B332F5ABE0700BA70BC /* CoffeeViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		6C798B302F5ABD2600BA70BC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				6C798B352F5AC11E00BA70BC /* CoffeeListView.swift */,
-				6C8147262F6937A1007B2809 /* CoffeeDetailView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +54,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				6C798B212F5ABC3400BA70BC /* CoffeeDrinksApp */,
-				6C8147212F6930CE007B2809 /* Services */,
 			);
 			name = CoffeeDrinksApp;
 			packageProductDependencies = (
@@ -157,10 +111,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C798B342F5ABE0700BA70BC /* CoffeeViewModel.swift in Sources */,
-				6C798B362F5AC11E00BA70BC /* CoffeeListView.swift in Sources */,
-				6C8147272F6937A1007B2809 /* CoffeeDetailView.swift in Sources */,
-				6C798B322F5ABD7C00BA70BC /* CoffeeDrink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +250,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +282,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

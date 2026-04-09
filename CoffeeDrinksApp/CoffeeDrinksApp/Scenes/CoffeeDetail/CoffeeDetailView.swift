@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct CoffeeDetailView: View {
-    
-    let drink: CoffeeDrink
+
+    var viewModel: DetailCoffeeViewModel
     
     var body: some View {
         VStack(spacing: 20) {
             
-            Text(drink.name)
+            Text(viewModel.drinkSelected.name)
                 .font(.largeTitle)
                 .bold()
             
-            Text(drink.description)
+            Text(viewModel.drinkSelected.description)
                 .font(.body)
                 .foregroundColor(.gray)
             

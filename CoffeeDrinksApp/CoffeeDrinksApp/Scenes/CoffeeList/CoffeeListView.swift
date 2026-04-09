@@ -13,8 +13,13 @@ struct CoffeeListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.drinks) { drink in
-                NavigationLink(destination: CoffeeDetailView(drink: drink)) {
-                    
+                NavigationLink(
+                    destination: CoffeeDetailView(
+                        viewModel: DetailCoffeeViewModel(
+                            drinkSelected: drink
+                        )
+                    )
+                ) {
                     VStack(alignment: .leading) {
                         Text(drink.name)
                             .font(.headline)
