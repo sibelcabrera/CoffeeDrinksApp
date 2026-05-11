@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CoffeeService {
+class CoffeeService: CoffeeServiceProtocol {
     
     func fetchDrinks(completion: @escaping ([CoffeeDrink]) -> Void) {
         

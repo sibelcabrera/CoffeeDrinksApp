@@ -14,9 +14,9 @@ class CoffeeViewModel: ObservableObject {
     @Published var drinks: [CoffeeDrink] = []
     @Published var isLoading = false
     
-    private let service: CoffeeService
+    private let service: CoffeeServiceProtocol
 
-    init(service: CoffeeService) {
+    init(service: CoffeeServiceProtocol) {
         self.service = service
     }
 

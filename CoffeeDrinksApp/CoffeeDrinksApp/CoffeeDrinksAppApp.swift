@@ -12,9 +12,7 @@ struct CoffeeDrinksAppApp: App {
     var body: some Scene {
         WindowGroup {
             CoffeeListView(
-                viewModel: CoffeeViewModel(
-                    service: CoffeeService()
-                )
+                viewModel: CoffeeViewModel(service: CoffeeServiceMock())
             )
         }
     }
